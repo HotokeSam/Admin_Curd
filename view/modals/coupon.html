@@ -1,0 +1,74 @@
+<div class="modal container">
+    <button data-func="close-modal" class="close"><i class="las la-times"></i></button>
+	<div class="modal-header pd-all-20">
+		<h1>Kupon létrehozása</h1>
+	</div>
+    <div class="modal-content pd-all-20 row">
+        <div class="c-code col-md-3">
+            <label class="c-group mg-bottom-20">
+                <span class="mg-bottom-10">Kuponkód</span>
+                <input class="pd-left-20" type="text" placeholder="Kuponkód" name="code">
+            </label>
+            <button data-btn="generate.code" class="mg-bottom-10" data-func="generate.coupon-code">Kód generálása!</button>
+            <label class="c-group mg-vertical-20">
+                <input type="checkbox" name="costumCode">
+                <span class="not-span">Egyéni kódot adok meg!</span>
+            </label>
+        </div>
+        <div class="c-code col-md-3">
+            <label class="c-group mg-bottom-20">
+                <span class="mg-bottom-10">Kedvezmény értéke</span>
+                <input class="pd-left-20" type="text" name="amount">
+            </label>
+            <label class="c-group mg-bottom-20">
+                <span class="mg-bottom-10">Érték típusa</span>
+                <select class="pd-left-20" name="type">
+                    <option value="%">Százalék %</option>
+                    <option value="M">Összeg</option>
+                </select>
+            </label>
+        </div>
+        <div class="c-code col-md-3">
+            <label class="c-group mg-bottom-20">
+                <span class="mg-bottom-10">Kezdeti dátum</span>
+                <input class="pd-left-20" type="text" placeholder="YYYY-MM-DD HH:ii:ss" name="startDate">
+            </label>
+            <label class="c-group mg-bottom-20">
+                <span class="mg-bottom-10">Lejárati dátum</span>
+                <input class="pd-left-20" type="text" placeholder="YYYY-MM-DD HH:ii:ss" name="stopDate">
+            </label>
+            <label class="c-group mg-bottom-20">
+                <input type="checkbox" name="couponDate">
+                <span class="not-span">Nincs lejárati idő</span>
+            </label>
+        </div>
+        <div class="c-code col-md-3">
+            <label class="c-group mg-bottom-20">
+                <span class="mg-bottom-10">Felhasználhatóság</span>
+                <select class="pd-left-20" name="usability">
+                    <option value="1x">Egyszer felhasználható</option>
+                    <option value="-">Többször felhasználható</option>
+                </select>
+            </label>
+            <label class="c-group mg-bottom-20">
+                <span class="mg-bottom-10">Felhasználó keresése</span>
+                <select name="select.user">
+                </select>
+            </label>
+            <label class="c-group mg-top-20">
+                <input type="checkbox" name="userId">
+                <span class="not-span">Bárkinek elérhető</span>
+            </label>
+        </div>
+    </div>
+    <div class="modal-footer mg-vertical-20 pd-side-20">
+		<div class="options row mg-vertical-20">
+            <div class="float-l">
+			</div>
+			<div class="float-r">
+				<button data-func="close-modal" class="options-btn mg-side-20 pd-side-20">mégse</button>
+				<button data-func="create.coupon" id="create-update" class="options-btn mg-side-20 pd-side-20">Kupon létrehozása</button>
+			</div>
+		</div>
+    </div>
+</div>

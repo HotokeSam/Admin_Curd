@@ -1,0 +1,142 @@
+<div class="modal container">
+	<button data-func="close-modal" class="close"><i class="las la-times"></i></button>
+	<div data-info="orderid" class="modal-header pd-all-20">
+		<h1>Rendelés részletei</h1>
+		<div data-info="sessId" class="header-infos">
+			<span class="mg-left-20">#AAAAAAAA00000000</span> 
+		</div>
+	</div>
+	<div class="modal-content pd-all-20">
+		<div class="order-details row">
+			<div class="col-md-12">
+				<div class="order-card mg-vertical-5 col-md-3" data-info="orderNumber">
+					<h4>Rendelés száma</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-3" data-info="fullname">
+					<h4>Megrendelő neve</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-3" data-info="created">
+					<h4>Rendelés dátuma</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-3" data-info="paymentId">
+					<h4>Fizetési mód</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-3" data-info="invoice">
+					<h4>Számla státusz</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-3" data-info="isPet">
+					<h4>Van háziállat?</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-3" data-info="paid-status">
+					<h4>Fizetés státus</h4>
+					<span data-info="status" class="payment_status">Fizetve</span>
+					<span data-info="paidDate" class="payment_date">- 2222.22.22 10:32</span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-3" data-info="comment">
+					<h4>Megjegyzés</h4>
+					<span></span>
+				</div>
+			</div>
+			<div class="invoice-datas mg-top-10 row col-md-6">
+				<h3>Számlázási adatok</h3> 
+				<div class="order-card mg-vertical-5 col-md-6" data-info="invoice_address">
+					<h4>Számlázási cím</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-6" data-info="invoice_phone">
+					<h4>Telefonszám</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-6" data-info="invoice_email">
+					<h4>E-mail cím</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-bottom-10 col-md-6" data-info="invoice_tax_number">
+					<h4>Adószám</h4>
+					<span></span>
+				</div>
+			</div>
+			<div class="shipping-datas mg-top-10 row col-md-6">
+				<h3>Szállítási adatok</h3>
+				<div class="order-card mg-vertical-5 col-md-6" data-info="shipment_address">
+					<h4>Szállítási cím</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-6" data-info="shipmentId">
+					<h4>Szállítási mód</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-6" data-info="shipment_phone">
+					<h4>Telefonszám</h4>
+					<span></span>
+				</div>
+				<div class="order-card mg-vertical-5 col-md-6" data-info="shipment_email">
+					<h4>E-mail cím</h4>
+					<span></span>
+				</div>
+			</div>
+			<div class="order-card table-list mg-vertical-5 col-md-12 row">
+				<table data-table="single-order">
+					<thead>
+						<tr>
+							<th class="name">Termék neve</th>
+							<th class="quantity">Mennyiség</th>
+							<th class="price">Ár fogy.</th>
+							<th class="price">Ár Beszerz.</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-info="ordered-product_orderId" data-temp="o-items">
+							<td data-info="ordered_product_name" class="product-name"><div></div></td>
+							<td data-info="ordered_product_quantity"></td>
+							<td data-info="ordered_product_sellPrice"></td>
+							<td data-info="ordered_product_buyPrice"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer mg-vertical-20 pd-side-20">
+		<div class="options row mg-vertical-20">
+			<div class="modal-options-btn mobile">
+				<i data-func="open.modal-options" class="las la-pen"></i>
+				<div class="floating-options hidden">
+					<button class="options-btn mg-side-20 pd-side-20 edit-btn"><a href="/order-edit">Szerkesztés</a></button>
+					<button class="options-btn mg-side-20 pd-side-20">Számla megtekintése</button>
+					<button data-func="edit.status" class="options-btn mg-side-20 pd-side-20">Státus módosítás</button>
+				</div>
+			</div>
+			<div class="float-l">
+				<div class="options-edit-status hidden pd-all-20">
+					<label for="">Státusz módosítás
+						<select class="mg-top-10" name="status-change" id="">
+							<option value="wait-to-pay">Fizetésre vár</option>
+							<option value="paid">Fizetve</option>
+							<option value="processing">Folyamatban</option>
+							<option value="in-transit">Szállítás alatt</option>
+							<option value="done">Kiszállítva</option>
+							<option value="deleted">Törölt</option>
+						</select>
+						<button data-func="change.status" class="save-status pd-all-10 mg-left-20">Mentés</button>
+					</label>
+				</div>
+				<div class="desktop-options desktop">
+					<button class="options-btn mg-side-20 pd-side-20 edit-btn"><a href="/order-edit">Szerkesztés</a></button>
+					<button class="options-btn mg-side-20 pd-side-20">Számla megtekintése</button>
+					<button data-func="edit.status" class="options-btn mg-side-20 pd-side-20">Státus módosítás</button>
+				</div>
+			</div>
+			<div class="float-r">
+				<div data-info="totalAmount" class="mg-right-20 allprice"></div>
+				<div data-info="profitAmount" class="profit"></div>
+			</div>
+		</div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+<div class="modal container">
+	<button data-func="close-modal" class="close"><i class="las la-times"></i></button>
+	<div data-info="userId" class="modal-header pd-all-20">
+		<h1>Felhasználó adatai</h1>
+	</div>
+	<div class="modal-content pd-all-20">
+		<div class="user-details row">
+			<div class="col-md-12">
+				<div class="user-card mg-vertical-5 col-md-3" data-info="name">
+					<h4>Felhasználónév</h4>
+					<span></span>
+				</div>
+				<div class="user-card mg-vertical-5 col-md-3" data-info="email">
+					<h4>Email cím</h4>
+					<span></span>
+				</div>
+				<div class="user-card mg-vertical-5 col-md-3" data-info="phone">
+					<h4>Telefonszám</h4>
+					<span></span>
+				</div>
+				<div class="user-card mg-vertical-5 col-md-3" data-info="defaultShipment">
+					<h4>Elsődleges szállítási mód</h4>
+					<span></span>
+				</div>
+				<div class="user-card mg-vertical-5 col-md-3" data-info="defaultPayment">
+					<h4>Elsődleges Fizetési mód</h4>
+					<span></span>
+				</div>
+				<div class="user-card mg-vertical-5 col-md-3" data-info="created">
+					<h4>Regisztráció dátuma</h4>
+					<span></span>
+				</div>
+			</div>
+			<div class="invoice-datas mg-top-10 row col-md-6">
+				<h3>Mentett számlázási adatok</h3>  
+				<div class="user-card mg-vertical-5 col-md-6" data-info="invoice_address">
+					<h4>Számlázási cím</h4>
+					<span></span>
+				</div>
+				<div class="user-card mg-vertical-5 col-md-6" data-info="invoice_phone">
+					<h4>Telefonszám</h4>
+					<span></span>
+				</div>
+				<div class="user-card mg-vertical-5 col-md-6" data-info="invoice_email">
+					<h4>E-mail cím</h4>
+					<span></span>
+				</div>
+				<div class="user-card mg-bottom-10 col-md-6" data-info="invoice_tax_number">
+					<h4>Adószám</h4>
+					<span> k</span>
+				</div>
+			</div>
+			<div class="shipping-datas mg-top-10 row col-md-6">
+				<h3>Mentett szállítási adatok</h3>
+				<div class="user-card mg-vertical-5 col-md-6" data-info="shipment_address">
+					<h4>Szállítási cím</h4>
+					<span></span>
+				</div>
+				<div class="user-card mg-vertical-5 col-md-6" data-info="shipment_phone">
+					<h4>Telefonszám</h4>
+					<span></span>
+				</div>
+				<div class="user-card mg-vertical-5 col-md-6" data-info="shipment_email">
+					<h4>E-mail cím</h4>
+					<span></span>
+				</div>
+			</div>
+			<div class="user-card table-list mg-vertical-5 col-md-12 row">
+				<table data-table="user-orders">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Rendelés szám</th>
+							<th>Ár fogy.</th>
+							<th>Ár beszerz.</th>
+							<th>Státusz</th>
+							<th>Műveletek</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-temp="u-orders">
+							<td data-info="user_orderId"></td>
+							<td data-info="user_orderNumber"></td>
+							<td data-info="user_totalAmount"></td>
+							<td data-info="user_productsAmount"></td>
+							<td data-info="user_status"></td>
+							<td>
+								<button data-func="open.order-details-modal"><i class="las la-info"></i></button>
+								<button data-func="delete.user" class="bg-red" data-func="delete.user"><i class="las la-trash"></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer mg-vertical-20 pd-side-20">
+		<div class="options row mg-vertical-20">
+			<div class="modal-options-btn mobile">
+				<i data-func="open.modal-options" class="las la-pen"></i>
+				<div class="floating-options hidden">
+					<button data-func="edit.status" class="options-btn mg-side-20 pd-side-20 bg-red">Felhasználó törlése</button>
+					<button class="options-btn mg-side-20 pd-side-20 edit-btn"><a href="/order-edit">Szerkesztés</a></button>
+					<button data-func="edit.status" class="options-btn mg-side-20 pd-side-20">Kiküldött Emailek megjelenítése</button>
+					<button data-func="edit.status" class="options-btn mg-side-20 pd-side-20">Jelszó visszaállítás küldése</button>
+				</div>
+			</div>
+			<div class="float-l desktop">
+				<button data-func="edit.status" class="options-btn mg-side-20 pd-side-20 bg-red">Felhasználó törlése</button>
+				<button class="options-btn mg-side-20 pd-side-20 edit-btn"><a href="/order-edit">Szerkesztés</a></button>
+				<button data-func="edit.status" class="options-btn mg-side-20 pd-side-20">Kiküldött Emailek megjelenítése</button>
+				<button data-func="edit.status" class="options-btn mg-side-20 pd-side-20">Jelszó visszaállítás küldése</button>
+			</div>
+		</div>
+    </div>
+</div>
